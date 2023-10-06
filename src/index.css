@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
+input::placeholder {
+  color: rgb(213, 209, 209);
+}
+div a.active {
+  border-bottom: 2px solid #f9a51a;
+}
+
+.swiper-slide-active{
+  border: 4px solid #F9A51A;
+  border-radius: 10px;
+}
