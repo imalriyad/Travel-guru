@@ -11,6 +11,7 @@ const DatePicker = ({ tittle, division }) => {
         <input
           type="text"
           defaultValue={division}
+          readOnly
           placeholder="Type here"
           className="input font-Montserrat font-medium focus:outline-none input-bordered input-md w-full max-w-sm"
         />{" "}
@@ -22,6 +23,7 @@ const DatePicker = ({ tittle, division }) => {
         <input
           type="text"
           defaultValue={tittle}
+          readOnly
           placeholder="Type here"
           className="input font-Montserrat font-medium focus:outline-none input-bordered input-md w-full max-w-sm"
         />
