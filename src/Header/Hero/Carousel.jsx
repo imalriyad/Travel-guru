@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { useEffect, useRef } from "react";
-const Carousel = ({ heroData, setDescription,nextHandler1,setTitle, setActiveIndex, prevHandler1 }) => {
+const Carousel = ({ heroData, setDescription,nextHandler1,setTitle, setActiveIndex, prevHandler1 ,setDivision}) => {
   const swiperRef = useRef(null);
 
   const nextHandler = () => {
@@ -29,8 +29,10 @@ const Carousel = ({ heroData, setDescription,nextHandler1,setTitle, setActiveInd
         const activeSlide = swiperRef.current.slides[newIndex];
         const activeSlideText = activeSlide.querySelector("h1").textContent;
         const activeSlidedes = activeSlide.querySelector("p").textContent;
+        const activeSlideDiv = activeSlide.querySelector("h5").textContent;
         setTitle(activeSlideText);
         setDescription(activeSlidedes)
+        setDivision(activeSlideDiv)
       });
     }
   }, [])
@@ -59,6 +61,7 @@ const Carousel = ({ heroData, setDescription,nextHandler1,setTitle, setActiveInd
               {item?.placeName}
             </h1>
             <p className="hidden">{item?.description}</p>
+            <h5 className="hidden">{item?.division}</h5>
           </SwiperSlide>
         ))}
       </Swiper>
